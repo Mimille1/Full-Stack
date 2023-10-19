@@ -23,7 +23,21 @@ SELECT * FROM `employe` WHERE `titre` = "secrétaire"
 7 - Afficher le nom et le numéro de département dont le numéro de département est supérieur à 40.
 SELECT `nom`, `nodep` FROM employe WHERE `nodep` > 40
 
-Afficher le nom et le prénom des employés dont le nom est alphabétiquement antérieur au prénom.
+8 - Afficher le nom et le prénom des employés dont le nom est alphabétiquement antérieur au prénom.
+SELECT `nom`, `prenom` FROM employe WHERE `nom` < `prenom`
+
+9 - Afficher le nom, le salaire et le numéro du département des employés dont le titre est « Représentant », le numéro de département est 35 et le salaire est supérieur à 20000.
+SELECT `nom`, `salaire` , `nodep` FROM employe WHERE `titre` = "représentant" AND `nodep`= 35 AND `salaire` > 20000
+
+10 - Afficher le nom, le titre et le salaire des employés dont le titre est « Représentant » ou dont le titre est « Président ».
+SELECT `nom`, `titre` , `nodep` , `salaire` FROM employe WHERE `titre` = "représentant" OR `titre` = "président"
+
+11 - Afficher le nom, le titre, le numéro de département, le salaire des employés du département 34, dont le titre est « Représentant » ou « Secrétaire ».
+SELECT `nom`, `titre` , `nodep` , `salaire` FROM employe WHERE `nodep` = 34 AND `titre` = "représentant" OR "secrétaire"
+
+12 - Afficher le nom, le titre, le numéro de département, le salaire des employés dont le titre est Représentant, ou dont le titre est Secrétaire dans le département numéro 34.
 .
 
-Afficher le nom, le salaire et le numéro du département des employés dont le titre est « Représentant », le numéro de département est 35 et le salaire est supérieur à 20000.
+13 - Afficher le nom, et le salaire des employés dont le salaire est compris entre 20000 et 30000
+.
+
