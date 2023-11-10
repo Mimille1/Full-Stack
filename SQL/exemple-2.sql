@@ -35,7 +35,7 @@ Rechercher le numéro de département, le nom du département, le nom des employ
 .
 
 2 - Calculer la moyenne des salaires et leur somme, par région.
-.
+
 
 3 - Afficher les numéros des départements ayant au moins 3 employés.
 .
