@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="ASSET/CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar + lien page -->
+    <div class="container-fluid parallax">
+        <div class="row" style="background-color: #970747;">
+            <div class="col-3">
+                <img src="ASSET/the_district_brand/logo.png" class="d-inline-block align-top" alt="logo_distrit"
+                    height="auto" width="90px">
+            </div>
+
+            <nav class="navbar navbar-expand-md navbar-light" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <div class="col">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Acceuil <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="catégorie.html">Catégorie <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="plats.html">Plats <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                </ul>
+
+            </nav>
+        </div>
+
+        <!-- Image fond + Recherche -->
+        <div class="row background justify-content-center align-items-center">
+
+            <form>
+                <div class="form-inline display-none display-md">
+                    <input type="text" class="form-control" placeholder="Recherche ...">
+                    <button class="btn text-light btn-outline-success bg-primary" type="submit">Rechercher</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Catégorie -->
+        <div class="card-deck justify-content-center d-none d-md-flex pt-5">
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie Asiatiques</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/asian_food_cat_resized.jpg" alt="asian">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie Burgers</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/burger_cat.jpg" alt="burger">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie Pâtes</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/pasta_cat.jpg" alt="pate">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Catégorie -->
+        <div class="card-deck justify-content-center d-none d-md-flex pt-5">
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie pizza</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/pizza_cat.jpg" alt="pizza">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie Salade</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/salade_cat_resized.jpg" alt="salade">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light">
+                        <div class="card-header">
+                            <p class="h5 text-center">Catégorie Sandwish</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/category/sandwich_cat.jpg" alt="sand">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Plat -->
+        <div class="row row-cols-1 row-md-cols-3 justify-content-center display-none display-flex pt-5">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Le Sushi bateau</p>
+                            <div class="card-body">
+                                <img class="card-img-bottom" src="ASSET/food/Asiatique/bateau-r2.jpg" alt="bateau">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Pâte Bolognaise</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/food/Pates/pate_bolo.jpg" alt="bolo">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Salade césar</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/food/Salade/salade_caesar.jpg" alt="salade">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row d-md-none">
+            <div class="col-12 justify-content-center d-flex">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">Pizza Saumon</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" src="ASSET/food/Pizza/pizza-salmon.png" alt="saumon">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row d-md-none">
+            <div class="col-12 justify-content-center d-flex">
+                <a href="plats.html">
+                    <div class="card bg-light rounded">
+                        <div class="card-header">
+                            <p class="h5 text-center">L'accompagnant</p>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-bottom" id="img" src="ASSET/food/Sandwish/sand_viande.jpeg"
+                                alt="viande">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Réseau -->
+        <div class="row col-12 justify-content-center">
+            <img src="ASSET/the_district_brand/facebook logo.png" class="img-fluid" alt="facebook"
+                style="height: 4rem; width: auto;">
+            <img src="ASSET/the_district_brand/instagram logo.jpeg" class="img-fluid" alt="instagram"
+                style="height: 4rem; width: auto;">
+            <img src="ASSET/the_district_brand/linkedin logo.png" class="img-fluid" alt="linkedin"
+                style="height: 4rem; width: auto;">
+            <img src="ASSET/the_district_brand/pinterest logo.png" class="img-fluid" alt="pinterest"
+                style="height: 4rem; width: auto;">
+            <img src="ASSET/the_district_brand/twitter logo.png" class="img-fluid" alt="twitter"
+                style="height: 4rem; width: auto;">
+            <img src="ASSET/the_district_brand/youtube logo.jpeg" class="img-fluid" alt="youtube"
+                style="height: 4rem; width: auto;">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
