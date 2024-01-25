@@ -5,3 +5,4 @@ try {
 } catch (Exception $e) {
     echo "Erreur de connexion" . $e->getMessage();
 }
+?>
