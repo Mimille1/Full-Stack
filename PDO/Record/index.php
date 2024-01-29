@@ -1,6 +1,7 @@
 <?php
 include 'connexion.php'
-
+$stmt = $conn->query("SELECT * FROM disc JOIN artist ON disc.artist_id = artist.artist_id");
+$result = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <head>
@@ -13,7 +14,46 @@ include 'connexion.php'
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+        <h1 class='col-10'>
+            Liste des disques(<?php echo count($result); ?>)
+        </h1>
+        <a href="add_form.php"class='btn btn-primary'> Ajouter</a>
+        </div>
 
+        <div class="container">
+        <div class="row">
+        <div class="card-deck ">
+        <?php foreach ($result as $row) { ?>
+
+            <div class="col-6 mt-5 ">
+
+                <div class="card " style="background-color: rgb(211, 211, 211);">
+
+                    <div class="row no-gutters">
+                        <?php echo "<img  src='asset/img/" . $row->disc_picture . "'>"; ?>
+
+                        <div class="card-body">
+
+                            <?php
+                            $id = $row->disc_id;
+                            echo '<p class="card-text"><b>' . $row->disc_title . '</b><br>'
+                                . $row->artist_name . '<br>' . '<b>Label </b>:' . $row->disc_label . '<br>'
+                                . '<b>Year </b>: ' . $row->disc_year . '<br>' . '<b>Genre </b>: '
+                                . $row->disc_genre . '</p><a href="details.php?disc_id=' . $id
+                                . '" class="btn btn-primary">Détails</a>';
+                                ?>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php } ?>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
