@@ -1,5 +1,5 @@
 <?php
-include 'connexion.php'
+include 'connexion.php';
 
 $stmt = $conn->query("SELECT * FROM disc JOIN artist ON disc.artist_id = artist.artist_id");
 $result = $stmt->fetchAll(PDO::FETCH_OBJ);

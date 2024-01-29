@@ -1,8 +1,17 @@
 <?php
+
+$servername = "localhost:3307";
+$username = "root";
+$password = "";
+$dbname = "record";
+
 try {
-    $db = new PDO('mysql:host=localhost:3307;dbname=record', 'root', '');
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    echo "Erreur de connexion" . $e->getMessage();
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    
+} catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données: " . $e->getMessage();
 }
+
 ?>
