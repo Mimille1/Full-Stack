@@ -20,7 +20,7 @@ $result = $stmt->fetchAll(PDO::FETCH_OBJ);
         <h1 class='col-10'>
             Liste des disques(<?php echo count($result); ?>)
         </h1>
-        <a href="add_form.php"class='btn btn-primary'> Ajouter</a>
+        <a href="./add_form.php"class='btn btn-primary'> Ajouter</a>
         </div>
 
         <div class="container">
