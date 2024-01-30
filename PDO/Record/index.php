@@ -34,7 +34,7 @@ $result = $stmt->fetchAll(PDO::FETCH_OBJ);
 
                     <div class="row no-gutters">
                         <?php echo "<img  src='asset/img/" . $row->disc_picture . "'>"; ?>
-
+ 
                         <div class="card-body">
 
                             <?php

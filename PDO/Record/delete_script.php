@@ -1,6 +1,7 @@
 <?php
 
 include 'connexion.php';
+include 'disc_script.php';
 
 if (isset($_GET['disc_id'])) {
     $id = $_GET['disc_id'];

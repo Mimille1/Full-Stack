@@ -1,5 +1,6 @@
 <?php
 include 'connexion.php';
+include 'disc_script.php';
 
 
 $SQL = "INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id)
