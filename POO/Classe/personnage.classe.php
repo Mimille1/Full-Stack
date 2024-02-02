@@ -11,8 +11,7 @@ public function __construct($nom, $prenom, $age, $sexe) {
     $this->_nom = $nom;
     $this->_prenom = $prenom;
     $this->_age = $age;
-    $this->_sexe = $sexe;
-
+    $this->_sexe = $sexe
 }
 public function getNom() {
     return $this->_nom;

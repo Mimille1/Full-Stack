@@ -8,7 +8,6 @@ class magasin{
     private $ville_mag;
     private $restaurant;
     
-    
     public function __construct($nom_mag, $adresse_mag, $postal_mag, $ville_mag, $restaurant){
         $this->nom_mag = $nom_mag;
         $this->adresse_mag = $adresse_mag;
@@ -195,9 +194,5 @@ class magasin{
             $this->vacance() . "<br>Chéques noël : ". $this->noel() . "<br> <br>";
     }
  
-
 }
-
-
-
 ?>
