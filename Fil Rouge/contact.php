@@ -10,7 +10,7 @@ include 'DAO.php';
     <!-- formulaire -->
 
     <div class="container text-white">
-        <form action="form.php" id="coordonnées" method="post">
+        <form action="form.php" id="coordonnees" method="post">
             <div class="form-check">
                 <div class="form-row">
                     <div class="col-5 form-group">

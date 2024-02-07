@@ -40,6 +40,13 @@ function categorie_categorie($connexion)
     return $result;
 }
 
+function menu_categorie($connexion)
+{
+    $stmt = $connexion->query("SELECT * FROM categorie limit 6");
+    $result = $stmt->fetchAll(PDO::FETCH_OBJ);
+    return $result;
+}
+
 function plat_plat($connexion)
 {
     $stmt = $connexion->query("SELECT * FROM plat limit 6");
