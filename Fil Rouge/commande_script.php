@@ -26,7 +26,7 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 
 // On configure l'adresse du serveur SMTP
-$mail->Host       = 'localhost';    
+$mail->Host       = 'localhost:3307';    
 
 // On désactive l'authentification SMTP
 $mail->SMTPAuth   = false;    
