@@ -5,8 +5,6 @@ include 'DAO.php';
 $result = categorie_index($conn);
 $result2 = plat_index($conn);
 
-
-
 ?>
 
 
@@ -50,7 +48,7 @@ $result2 = plat_index($conn);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="asset/image/images_the_district/category/<?= $row->image; ?>" alt="Card images Pinterest">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card img category">
                             </div>
                         </div>
                     </a>
@@ -81,7 +79,7 @@ $result2 = plat_index($conn);
                                     </h5>
 
                                     <br>
-                                    <img class="card-img-bottom" src="asset/image/images_the_district/food_sized/<?= $row->image; ?>" alt="Card images Pinterest">
+                                    <img class="card-img-bottom" src="ASSET/img/food/<?= $row->image; ?>" alt="Card img food">
                                 </div>
                             </div>
                         </a>
@@ -100,7 +98,7 @@ $result2 = plat_index($conn);
                                             </h5>
 
                                             <br>
-                                            <img class="card-img-bottom" src="asset/image/images_the_district/food_sized/<?= $row->image; ?>" alt="Card images Pinterest">
+                                            <img class="card-img-bottom" src="ASSET/img/food/<?= $row->image; ?>" alt="Card img food">
                                         </div>
                                     </div>
                                 </a>
@@ -109,6 +107,7 @@ $result2 = plat_index($conn);
                         </div>
                     <?php } ?>
                     </div>
+
                     <!-- Réseaux -->
 
                     <br><br><br><br>

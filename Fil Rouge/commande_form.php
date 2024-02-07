@@ -19,7 +19,7 @@ $id = $result['id'];
             <div class="card ml-5" style="background-color: rgb(156, 156, 156);">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="asset/image/images_the_district/food_sized/<?= $result['image']; ?>" class="card-img" alt="...">
+                        <img src="ASSET/img/food/<?= $result['image']; ?>" class="card-img" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

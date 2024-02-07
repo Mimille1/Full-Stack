@@ -29,7 +29,7 @@ $result = categorie_categorie($conn);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="asset/image/images_the_district/category/<?= $row->image; ?>" alt="Card images Pinterest">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images Pinterest">
                             </div>
                         </div>
                     </a>

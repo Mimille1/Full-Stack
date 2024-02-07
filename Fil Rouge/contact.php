@@ -6,6 +6,7 @@ include 'DAO.php';
 
 <div class="container-fluid parallax">
     <?php require 'header.php'; ?>
+    
     <!-- formulaire -->
 
     <div class="container text-white">

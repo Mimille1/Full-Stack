@@ -25,7 +25,6 @@ array_push(
     )
 );
 
-
 $nom = $form['form'][1]['nom'];
 $prenom = $form['form'][1]['prénom'];
 $email = $form['form'][1]['email'];

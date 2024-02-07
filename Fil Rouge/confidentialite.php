@@ -64,7 +64,6 @@
     </div>
     <br><br><br>
 
-
     <?php require 'footer.php'; ?>
 </div>
 </body>

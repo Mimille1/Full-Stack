@@ -99,7 +99,6 @@ function envoie($conn)
     } else {
         echo "Erreur : " . implode(", ", $stmt->errorInfo());
     }
-    
 }
 
 ?>
