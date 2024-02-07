@@ -31,11 +31,10 @@ $result3 = menu_categorie($connexion);
             </div>
         </div>
     </div>
-    <div class="card-deck justify-content-center d-none d-md-flex">
 
-        <?php foreach ($result as $row) {
-      
-            $id = $row->id; ?>
+
+    <div class="card-deck justify-content-center d-none d-md-flex">
+        <?php foreach ($result3 as $row) { ?>
 
             <div class="col-4 d-flex justify-content-center mt-5">
                 <div class="zoom">
@@ -51,20 +50,21 @@ $result3 = menu_categorie($connexion);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card img category">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images category">
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
+
+
         <?php } ?>
     </div>
+
     <div class="card-deck justify-content-center d-md-flex">
         <?php $cache = 0; ?>
         <?php foreach ($result2 as $row) {
             $cache = $cache + 1; ?>
-
-
 
 
             <?php if ($cache <= 3) { ?>
@@ -118,35 +118,6 @@ $result3 = menu_categorie($connexion);
                 </div>
 
     </div>
-
-    
-<div>
-<?php foreach ($result3 as $row) {?>
-
-            <div class="col-md-4 col-12 d-flex justify-content-center mt-5">
-                <div class="zoom">
-                    <a href="plat_categorie.php?id=<?= $id ?>">
-                        <div class="card" style="background-color: rgb(156, 156, 156);">
-
-                            <div class="card-header">
-                                Catégorie
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <?= $row->libelle; ?>
-                                </h5>
-
-                                <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images category">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
- 
-       <?php } ?>
-</div>
 
     <?php require 'footer.php'; ?>
 </div>
