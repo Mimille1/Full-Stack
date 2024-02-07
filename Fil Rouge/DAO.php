@@ -106,5 +106,5 @@ function envoie($connexion)
         echo "Erreur : " . implode(", ", $stmt->errorInfo());
     }
 }
-
+$nombre=0;
 ?>

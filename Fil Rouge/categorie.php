@@ -13,7 +13,8 @@ $result = categorie_categorie($connexion);
     <!-- recherche -->
     <div class="card-deck justify-content-center d-md-flex">
         <?php foreach ($result as $row) {
-            $id = $row->id; ?>
+            $id = $row->id;
+            $nombre++; ?>
 
             <div class="col-md-4 col-12 d-flex justify-content-center mt-5">
                 <div class="zoom">
@@ -29,14 +30,22 @@ $result = categorie_categorie($connexion);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images Pinterest">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images category">
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
 
-        <?php } ?>
+        <?php
+            if ($nombre == 6) {
+                $nombre = 0;
+                break;
+            }
+        } ?>
+
+
+
     </div>
 
 
