@@ -4,17 +4,17 @@
         <div class="row">
             <div class="row col-12 justify-content-md-center d-none d-md-flex mt-5">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/facebook logo.png" class="img-fluid" alt="facebook" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/facebook_logo.png" class="img-fluid" alt="facebook" style="height: 4rem; width: auto;">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/instagram logo.jpeg" class="img-fluid" alt="instagram" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/instagram_logo.jpeg" class="img-fluid" alt="instagram" style="height: 4rem; width: auto;">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/linkedin logo.png" class="img-fluid" alt="linkedin" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/linkedin_logo.png" class="img-fluid" alt="linkedin" style="height: 4rem; width: auto;">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/pinterest logo.png" class="img-fluid" alt="pinterest" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/pinterest_logo.png" class="img-fluid" alt="pinterest" style="height: 4rem; width: auto;">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/twitter logo.png" class="img-fluid" alt="twitter" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/twitter_logo.png" class="img-fluid" alt="twitter" style="height: 4rem; width: auto;">
 
-                <img class="img-fluid" src="ASSET/the_district_brand/youtube logo.jpeg" class="img-fluid" alt="youtube" style="height: 4rem; width: auto;">
+                <img class="img-fluid" src="ASSET/the_district_brand/youtube_logo.jpeg" class="img-fluid" alt="youtube" style="height: 4rem; width: auto;">
 
             </div>
             <a href="confidentialite.php"><b><u>Politique de confidentialité&nbsp;&nbsp;</u></b></a>
