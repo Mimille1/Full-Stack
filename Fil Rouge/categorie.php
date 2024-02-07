@@ -12,9 +12,7 @@ $result = categorie_categorie($connexion);
     <?php require 'header.php'; ?>
     <!-- recherche -->
     <div class="card-deck justify-content-center d-md-flex">
-        <?php var_dump($result);
-         foreach ($result as $row) {
-            
+        <?php foreach ($result as $row) {
             $id = $row->id; ?>
 
             <div class="col-md-4 col-12 d-flex justify-content-center mt-5">
@@ -31,7 +29,7 @@ $result = categorie_categorie($connexion);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->img; ?>" alt="Card images Pinterest">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images Pinterest">
                             </div>
                         </div>
                     </a>

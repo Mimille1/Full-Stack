@@ -35,7 +35,7 @@ function plat_index($connexion)
 
 function categorie_categorie($connexion)
 {
-    $stmt = $connexion->query("SELECT * FROM categorie WHERE active = 'YES'");
+    $stmt = $connexion->query("SELECT * FROM categorie WHERE active = 'Yes'");
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
