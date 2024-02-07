@@ -16,7 +16,7 @@ $result2 = plat_index($connexion);
         <div class="d-flex col-12 justify-content-center align-items-center">
 
             <video class="d-none d-md-flex" id="background-video" autoplay loop>
-                <source src="ASSET/img/fond_video.mp4" type=video/mp4>
+                <source src="ASSET/img/FOND_VIDEO.mp4" type=video/mp4>
 
 
         </div>
