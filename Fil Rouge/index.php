@@ -2,8 +2,8 @@
 
 include 'DAO.php';
 
-$result = categorie_index($conn);
-$result2 = plat_index($conn);
+$result = categorie_index($connexion);
+$result2 = plat_index($connexion);
 
 ?>
 

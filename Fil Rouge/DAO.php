@@ -6,17 +6,17 @@ $password = "";
 $dbname = "the-district";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $connexion = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 } catch (PDOException $e) {
-    echo "Erreur de connexion à la base de données: " . $e->getMessage();
+    echo "Erreur de conn$connexion à la base de données: " . $e->getMessage();
 }
 
-function categorie_index($conn)
+function categorie_index($connexion)
 {
-    $stmt = $conn->query("SELECT DISTINCT categorie.* from categorie
+    $stmt = $connexion->query("SELECT DISTINCT categorie.* from categorie
     JOIN plat ON categorie.id=plat.id_categorie
     JOIN commande ON plat.id=commande.id_plat
     WHERE categorie.active = 'YES'
@@ -25,29 +25,33 @@ function categorie_index($conn)
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
-function plat_index($conn)
+
+function plat_index($connexion)
 {
-    $stmt = $conn->query("SELECT * FROM plat limit 5");
+    $stmt = $connexion->query("SELECT * FROM plat limit 5");
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
-function categorie_categorie($conn)
+
+function categorie_categorie($connexion)
 {
-    $stmt = $conn->query("SELECT * FROM categorie WHERE active = 'YES'");
+    $stmt = $connexion->query("SELECT * FROM categorie WHERE active = 'YES'");
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
-function plat_plat($conn)
+
+function plat_plat($connexion)
 {
-    $stmt = $conn->query("SELECT * FROM plat limit 6");
+    $stmt = $connexion->query("SELECT * FROM plat limit 6");
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
-function plat_categorie($conn)
+
+function plat_categorie($connexion)
 {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $stmt = $conn->prepare("SELECT plat.* FROM plat JOIN categorie ON plat.id_categorie = categorie.id WHERE categorie.id = :id");
+        $stmt = $connexion->prepare("SELECT plat.* FROM plat JOIN categorie ON plat.id_categorie = categorie.id WHERE categorie.id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -55,11 +59,12 @@ function plat_categorie($conn)
         return $result;
     }
 }
-function commande_commande($conn)
+
+function commande_commande($connexion)
 {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $stmt = $conn->prepare("SELECT * FROM plat WHERE id = :id");
+        $stmt = $connexion->prepare("SELECT * FROM plat WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $result = $stmt->fetch();
@@ -67,7 +72,8 @@ function commande_commande($conn)
         return $result;
     }
 }
-function envoie($conn)
+
+function envoie($connexion)
 {
 
     
@@ -85,7 +91,7 @@ function envoie($conn)
     $SQL = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client)
                 VALUES (:id_plat, :quantite, :total, :dates, 'En préparation', :nom, :numero, :courriel, :adresse)";
 
-    $stmt = $conn->prepare($SQL);
+    $stmt = $connexion->prepare($SQL);
     $stmt->bindParam(':id_plat', $_POST['id_plat']);
     $stmt->bindParam(':quantite', $quantite);
     $stmt->bindParam(':total', $total);

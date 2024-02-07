@@ -2,7 +2,7 @@
 
 include 'DAO.php';
 
-$result = plat_categorie($conn);
+$result = plat_categorie($connexion);
 
 
 

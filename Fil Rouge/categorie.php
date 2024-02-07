@@ -2,7 +2,7 @@
 
 include 'DAO.php';
 
-$result = categorie_categorie($conn);
+$result = categorie_categorie($connexion);
 
 
 ?>
@@ -12,7 +12,9 @@ $result = categorie_categorie($conn);
     <?php require 'header.php'; ?>
     <!-- recherche -->
     <div class="card-deck justify-content-center d-md-flex">
-        <?php foreach ($result as $row) {
+        <?php var_dump($result);
+         foreach ($result as $row) {
+            
             $id = $row->id; ?>
 
             <div class="col-md-4 col-12 d-flex justify-content-center mt-5">
@@ -29,7 +31,7 @@ $result = categorie_categorie($conn);
                                 </h5>
 
                                 <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images Pinterest">
+                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->img; ?>" alt="Card images Pinterest">
                             </div>
                         </div>
                     </a>

@@ -2,7 +2,7 @@
 
 include 'DAO.php';
 
-$result = commande_commande($conn);
+$result = commande_commande($connexion);
 
 
 $id = $result['id'];

@@ -1,7 +1,7 @@
 <?php
 include 'DAO.php';
 
-$result = plat_plat($conn);
+$result = plat_plat($connexion);
 
 ?>
 
