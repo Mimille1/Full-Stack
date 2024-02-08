@@ -10,29 +10,47 @@ require 'vendor/autoload.php';
 // Création d'une nouvelle instance de PHPMailer
 $mail = new PHPMailer(true);
 
-try {
+
     // Paramètres du serveur SMTP
     $mail->isSMTP();
     $mail->Host = 'localhost:3307'; 
     $mail->SMTPAuth = false;
-    $mail->Username = 'root';
-    $mail->Password = '';
-    $mail->Port = '8025';  
+    $mail->Port = '1025';  
 
-    // Contenu de l'e-mail
-    $mail->isHTML(true);
-    $mail->Subject = 'Confirmation de commande';
-    $mail->Body    = 'Bonjour,<br>Votre commande a été confirmée avec succès.<br> Merci de votre commande!';
-    $mail->AltBody = 'Bonjour, votre commande a été confirmée avec succès. Merci de votre commande!';
+   // Expéditeur du mail - adresse mail + nom (facultatif)
+$mail->setFrom('from@thedistrict.com', 'The District Company');
 
-    // Envoi de l'e-mail
-    $mail->send();
-    echo 'Le message a été envoyé avec succès.';
-} catch (Exception $e) {
-    echo "Erreur lors de l'envoi du message : {$mail->ErrorInfo}";
-}
-?>
+// Destinataire(s) - adresse et nom (facultatif)
+$mail->addAddress("client1@example.com", "Mr Client1");
+$mail->addAddress("client2@example.com"); 
 
-<?php include 'header.php' ?>
+//Adresse de reply (facultatif)
+$mail->addReplyTo("reply@thedistrict.com", "Reply");
 
-<h2> votre livraison va arriver.</h2>
+//CC & BCC
+$mail->addCC("cc@example.com");
+$mail->addBCC("bcc@example.com");
+
+// On précise si l'on veut envoyer un email sous format HTML 
+$mail->isHTML(true);
+
+// On ajoute la/les pièce(s) jointe(s)
+$mail->addAttachment('/path/to/file.pdf');
+
+
+
+ // Sujet du mail
+$mail->Subject = 'Test PHPMailer';
+
+// Corps du message
+$mail->Body = "On teste l'envoi de mails avec PHPMailer";
+
+// On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
+if ($mail){
+    try {
+        $mail->send();
+        echo 'Email envoyé avec succès';
+        } catch (Exception $e) {
+        echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
+        } ; 
+    }
