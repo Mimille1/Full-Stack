@@ -32,33 +32,48 @@ $result3 = menu_categorie($connexion);
         </div>
     </div>
 
-
     <div class="card-deck justify-content-center d-none d-md-flex">
-        <?php foreach ($result3 as $row) { ?>
+        <?php foreach ($result3 as $row) {
+            $nombre++;
+$active=$row->active;
+// var_dump($active);
+            if ($active == 'Yes') {
 
-            <div class="col-4 d-flex justify-content-center mt-5">
-                <div class="zoom">
-                    <a href="plat_categorie.php?id=<?= $id ?>">
-                        <div class="card" style="background-color: rgb(156, 156, 156);">
 
-                            <div class="card-header">
-                                Catégorie
+        ?>
+
+                <div class="col-4 d-flex justify-content-center mt-5">
+                    <div class="zoom">
+                        <a href="plat_categorie.php?id=<?= $row->id; ?>">
+                            <div class="card" style="background-color: rgb(156, 156, 156);">
+
+                                <div class="card-header">
+                                    Catégorie
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <?= $row->libelle; ?>
+                                    </h5>
+
+                                    <br>
+                                    <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images category">
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <?= $row->libelle; ?>
-                                </h5>
-
-                                <br>
-                                <img class="card-img-bottom" src="ASSET/img/category/<?= $row->image; ?>" alt="Card images category">
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
+
+        <?php
+                if ($nombre == 6) {
+                    $nombre = 0;
+                    break;
+                }
+            };
+        } ?>
 
 
-        <?php } ?>
+
+
     </div>
 
     <div class="card-deck justify-content-center d-md-flex">

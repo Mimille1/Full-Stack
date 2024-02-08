@@ -42,7 +42,7 @@ function categorie_categorie($connexion)
 
 function menu_categorie($connexion)
 {
-    $stmt = $connexion->query("SELECT * FROM categorie limit 6");
+    $stmt = $connexion->query("SELECT * FROM categorie");
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
