@@ -29,6 +29,7 @@ try {
     $mail->SMTPAuth = false;
     $mail->Username = 'root';
     $mail->Password = '';
+    $mail->Port = 'localhost:1025';  
 
 
     // Contenu de l'e-mail
