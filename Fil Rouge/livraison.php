@@ -1,17 +1,5 @@
 <?php
 include 'DAO.php';
-$libelle = $_POST['libelle'];
-$quantite = $_POST['quantite'];
-$prix = $_POST['prix'];
-$total = floatval($prix) * floatval($quantite);
-$date = date('Y-m-d H:i:s');
-$quantite = $_POST['quantite'];
-$prix = $_POST['prix'];
-$nomPrenom = $_POST['NomPrenom'];
-$numero = $_POST['numero'];
-$courriel = $_POST['courriel'];
-$adresse = $_POST['adresse'];
-envoie($connexion);
 
 // Inclusion de la bibliothèque PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
@@ -29,8 +17,7 @@ try {
     $mail->SMTPAuth = false;
     $mail->Username = 'root';
     $mail->Password = '';
-    $mail->Port = 'localhost:1025';  
-
+    $mail->Port = '8025';  
 
     // Contenu de l'e-mail
     $mail->isHTML(true);
@@ -45,3 +32,7 @@ try {
     echo "Erreur lors de l'envoi du message : {$mail->ErrorInfo}";
 }
 ?>
+
+<?php include 'header.php' ?>
+
+<h2> votre livraison va arriver.</h2>

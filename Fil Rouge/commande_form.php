@@ -76,7 +76,7 @@ $id = $result['id'];
                 <span id="adresseError"></span>
             </div>
             <div class="col-11 text-right mt-5">
-                <button type="submit" class="btn btn-primary" id="submit">Envoyer</button>
+                <a type="submit" href="livraison.php" class="btn btn-primary" id="submit">Envoyer</a>
             </div>
             <input type="hidden" value="<?= $result['libelle'] ?>" name="libelle">
             <input type="hidden" value="<?= $result['prix'] ?>" name="prix">
